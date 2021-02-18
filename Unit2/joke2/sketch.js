@@ -4,7 +4,7 @@ let timer = 0;
 function setup() {
   createCanvas(500, 500);
   textAlign(CENTER);
-  textSize(48)
+  textSize(40)
 }
 
 function draw() {
