@@ -9,7 +9,7 @@ function setup() {
 function draw() {
   switch (state) {
     case 0:
-      background('white');
+      background('black');
       text("case 0", 250, 250);
       break;
     case 1:
