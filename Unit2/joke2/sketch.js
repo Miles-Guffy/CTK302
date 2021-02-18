@@ -16,7 +16,7 @@ function draw() {
 
     case 1:
       background('green')
-      text("They'd crack each other up.", width / 2, height / 2);
+      text("They'd crack \n each other up.", width / 2, height / 2);
       break;
 
   }
