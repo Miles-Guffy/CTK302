@@ -24,7 +24,7 @@ function draw() {
 
 
     case 0:
-      background(100);
+      background("green");
       text("shhh!!!", width / 2, height / 2)
       if (vol > .08) {
         state = 1;
