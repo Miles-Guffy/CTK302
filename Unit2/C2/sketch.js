@@ -34,7 +34,7 @@ function draw() {
     case 1:
       background('blue');
       text("Quiet Down!!", width / 2, height / 2)
-      timer++ > (3 * 60) {
+      timer++ > (3 * 60)
         state = 0;
         timer = 0;
       }
