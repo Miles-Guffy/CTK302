@@ -5,6 +5,7 @@ let photo2;
 let photo3;
 let photo4;
 let photo5;
+let timer = 0;
 
 
 
@@ -26,64 +27,80 @@ function setup() {
 }
 
 function draw() {
+  timer++;
+  if (timer > 10 * 60) {
+    state++;
+    timer = 0;
 
+    if (state > 4) {
+      state = 0;
+    }
+  }
   switch (state) {
     case 0:
-      background('white');
+      background('#8fc8c9');
       textSize(20);
       textFont(f1);
-      text(" This story is about the time I went to volunteer \n at an orphanage in Haiti, my life has never been the same! ", 500, 100);
-      image(photo1, width / 2, 400, 200, 200);
+      fill("black")
+      text(" This story is about the time I went to volunteer \n at an orphanage in Haiti, my life has never been the same! ", width / 2, 100);
+      image(photo1, width / 2, 400, 400, 400);
+      text("Click to start", width / 2, 650);
       break;
 
     case 1:
-      background('grey');
-      text(" We spent a week working with the children and other local groups. ", 100, 100);
+      background('#a63a3a');
+      textSize(20);
+      textFont(f1);
+      fill("black")
+      text(" We spent a week working with \n the children and other local humanitarian groups. ", width / 2, 100);
+      image(photo2, width / 2, 400, 400, 400);
 
       break;
 
 
-case 2:
-  background('blue');
-text(" state 2", 100, 100);
-for (let j = 0; j < 20; j++) {
-  for (let i = 0; i < 20; i++) {
-    triangle(i * 50 + 10, j * 50 + 10, 25, 5);
-  }
-}
-break;
+    case 2:
+      background('#72c289');
 
-case 3:
-  background('red');
-text(" state 3", 100, 100);
-for (let j = 0; j < 20; j++) {
-  for (let i = 0; i < 20; i++) {
-    ellipse(i * 50 + 10, j * 50 + 10, 25, 5);
-  }
-}
+      for (let j = 0; j < 20; j++) {
+        for (let i = 0; i < 20; i++) {
+          fill("black")
+          ellipse(i * 50 + 25, j * 50 + 10, 25, 15);
+          textSize(20);
+          textFont(f1);
+          fill("white")
+          text(" I had the privilege spending time with \n the happiest kids in the world!  ",  width / 2, 100);
+          image(photo5, width / 2, 400, 400, 400);
 
-break;
+        }
+      }
+      break;
 
-case 4:
-  background('yellow');
-text(" state 4", 100, 100);
-for (let j = 0; j < 20; j++) {
-  for (let i = 0; i < 20; i++) {
-    rect(i * 5000 + 10, j * 500 + 10, 25, 50);
-  }
-}
-break;
+    case 3:
+      background('grey');
+      text("  ", 100, 100);
+      fill("black");
+      for (let j = 0; j < 20; j++) {
+        for (let i = 0; i < 20; i++) {
+          ellipse(i * 50 + 10, j * 50 + 10, 25, 5);
+          image(photo4, width / 2, 400, 400, 400);
+        }
+      }
+      // image ()
+      break;
 
-case 5:
-  background('brown');
-text(" state 5", 100, 100);
-for (let j = 0; j < 20; j++) {
-  for (let i = 0; i < 20; i++) {
-    rect(i * 500 + 10, j * 10 + 10, 250, 5);
+    case 4:
+      background('#8da4a6');
+      text(" I hope this encourges you to take a step out \n of your comfortzone and try somthing new \n I did and my life will never be the same!",width / 2, 100);
+      for (let j = 0; j < 20; j++) {
+        for (let i = 0; i < 20; i++) {
+          rect(i * 50 + 10, j * 200 + 10, 25, 50);
+            image(photo3, width / 2, 400, 400, 400);
+        }
+      }
+      break;
+
+
   }
-}
-break;
-}
 
 }
 
