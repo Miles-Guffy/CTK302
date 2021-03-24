@@ -16,10 +16,10 @@ let photo4;
 function setup() {
   // createCanvas(windowWidth, windowHeight);
   createCanvas(500, 500);
-photo1 = loadImage('assests/background.jpg');
-photo2 = loadImage('assests/camera.jpg');
-photo3 = loadImage('assests/film.jpg');
-photo4 = loadImage('assests/winner.jpg');
+photo1 = loadImage('background.jpg');
+photo2 = loadImage('camera.jpg');
+photo3 = loadImage('film.jpg');
+photo4 = loadImage('winner.jpg');
 
 imageMode(CENTER);
 rectMode(CENTER);
