@@ -18,7 +18,7 @@ function draw() {
   fill("blue")
   rect(0, 750, 75, 20);
   x = x + velocity;
-  if (x > width){
+  if (x > width) {
     x = 0;
   }
 
@@ -47,7 +47,7 @@ function draw() {
       ellipse(width / 2, height / 2, 150, 150);
       fill("green");
       ellipse(width / 2, height / 2 + 170, 150, 150);
-      velocity =10;
+      velocity = 10;
 
     case 2: //yellow
       background('grey');
