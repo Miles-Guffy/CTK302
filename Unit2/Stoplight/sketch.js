@@ -71,5 +71,5 @@ function draw() {
 
   function mouseReleased() {
     state++;
-    if (state > 2) state = 0;
+    if (state > 2) state =0;
   }
