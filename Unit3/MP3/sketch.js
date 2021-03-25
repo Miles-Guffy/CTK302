@@ -8,7 +8,7 @@ let photo1;
 let photo2;
 let photo3;
 let photo4;
-
+let f1;
 
 
 
@@ -25,6 +25,7 @@ function setup() {
   rectMode(CENTER);
   textAlign(CENTER);
   // Spawn an object
+  f1 = loadFont("zefrave.ttf");
 
 
   for (let i = 0; i < maxCars; i++) {
@@ -39,15 +40,17 @@ function draw() {
 
   switch (state) {
     case 0:
-      background("black");
-      //image(photo1, width / 2, height / 2);
-      fill('white');
-      text("welcome to my game, click", 100, 100);
+      // background("black");
+      image(photo1, width / 2, height / 2);
+      fill('red');
+      textFont(f1, 25);
+      text("Click to play shutterbug!",width/2, height/2);
       break;
 
     case 1:
       game();
       timer++;
+
       if (timer > maxTimer) {
         timer = 0;
         state = 3; // go to lose state
@@ -55,16 +58,18 @@ function draw() {
       break;
 
     case 2: //win
-      background("black");
-      // image(photo4, 500,500);
+      // background("black");
+      image(photo4, width/2, height/2);
       fill('white');
-      text("Winner Winner!, click", 100, 100);
+      textFont(f1,32);
+      text("Winner Winner!, click", width/2, height/2);
       break;
 
     case 3: //lose
       background("black");
       fill('white');
-      text("Fail!, click", 100, 100);
+      textFont(f1, 75);
+      text("Fail!, click",width/2, height/2);
       break;
 
 
@@ -134,16 +139,16 @@ function game() {
   // here is my frog
   checkForKeys();
   // image('camera.jpg');
-  image('camera.jpg', frogPos.x, frogPos.y, 75, 75);
+  image(photo2, frogPos.x, frogPos.y, 75, 75);
 }
 
 
 
 function checkForKeys() {
-  if (keyIsDown(LEFT_ARROW)) frogPos.x -= 5;
-  if (keyIsDown(RIGHT_ARROW)) frogPos.x += 5;
-  if (keyIsDown(UP_ARROW)) frogPos.y -= 5;
-  if (keyIsDown(DOWN_ARROW)) frogPos.y += 5;
+  if (keyIsDown(LEFT_ARROW)) frogPos.x -= 8;
+  if (keyIsDown(RIGHT_ARROW)) frogPos.x += 8;
+  if (keyIsDown(UP_ARROW)) frogPos.y -= 8;
+  if (keyIsDown(DOWN_ARROW)) frogPos.y += 8;
 
   if (frogPos.x > width) frogPos.x = 0;
   if (frogPos.x > height) frogPos.x = 0;
@@ -164,8 +169,8 @@ class Car {
   // methods
 
   display() {
-    image('camera.jpg');
-    image('film.jpg')(this.pos.x, this.pos.y, this.size, 25);
+    // image('camera.jpg');
+    image(photo3,this.pos.x, this.pos.y, this.size, 25);
     // textSize(this.size);
     // text("WOOHOO", this.pos.x, this.pos.y);
     // image()
