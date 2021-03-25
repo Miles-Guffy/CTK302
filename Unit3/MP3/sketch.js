@@ -43,14 +43,14 @@ function draw() {
   switch (state) {
     case 0:
       // background("black");
-      image(photo1, width / 2, height / 2);
+      image(photo1, width / 2, height / 2, width, height);
       fill('red');
       textFont(f1, 25);
       text("Click to play shutterbug!",width/2, height/2);
       break;
 
     case 1:
-      image(photo5, width / 2, height / 2);
+      image(photo5, width / 2, height / 2, width, height);
       game();
       timer++;
 
@@ -62,7 +62,7 @@ function draw() {
 
     case 2: //win
       // background("black");
-      image(photo4, width/2, height/2);
+      image(photo4, width/2, height/2, width, height);
       fill('white');
       textFont(f1,32);
       text("Winner Winner!, click", width/2, height/2);
@@ -122,7 +122,7 @@ function resetTheGame() {
 
 
 function game() {
-image(photo5, width / 2, height / 2);
+image(photo5, width / 2, height / 2, width, height);
 
 
   for (let i = 0; i < cars.length; i++) {
