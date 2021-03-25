@@ -56,7 +56,7 @@ function draw() {
 
     case 2: //win
       background("black");
-       // image(photo4, 500,500);
+      // image(photo4, 500,500);
       fill('white');
       text("Winner Winner!, click", 100, 100);
       break;
@@ -133,8 +133,8 @@ function game() {
 
   // here is my frog
   checkForKeys();
-  image('camera.jpg');
-  image('camera.jpg',frogPos.x, frogPos.y, 75, 75);
+  // image('camera.jpg');
+  image('camera.jpg', frogPos.x, frogPos.y, 75, 75);
 }
 
 
