@@ -16,14 +16,14 @@ let photo4;
 function setup() {
   // createCanvas(windowWidth, windowHeight);
   createCanvas(500, 500);
-photo1 = loadImage('background.jpg');
-photo2 = loadImage('camera.jpg');
-photo3 = loadImage('film.jpg');
-photo4 = loadImage('winner.jpg');
+  photo1 = loadImage('background.jpg');
+  photo2 = loadImage('camera.jpg');
+  photo3 = loadImage('film.jpg');
+  photo4 = loadImage('winner.jpg');
 
-imageMode(CENTER);
-rectMode(CENTER);
-textAlign(CENTER);
+  imageMode(CENTER);
+  rectMode(CENTER);
+  textAlign(CENTER);
   // Spawn an object
 
 
@@ -39,31 +39,33 @@ function draw() {
 
   switch (state) {
     case 0:
-  image(photo1, width/2, height/2);
-    fill('white') ;
-    text("welcome to my game, click",100,100);
-    break;
+      background("black");
+      //image(photo1, width / 2, height / 2);
+      fill('white');
+      text("welcome to my game, click", 100, 100);
+      break;
 
     case 1:
-    game();
-    timer++;
-    if(timer > maxTimer){
-      timer = 0;
-      state = 3; // go to lose state
-    }
-    break;
+      game();
+      timer++;
+      if (timer > maxTimer) {
+        timer = 0;
+        state = 3; // go to lose state
+      }
+      break;
 
-    case 2://win
-    image(photo4,width/2,height/2);
-    fill('white') ;
-    text("Winner Winner!, click",100,100);
-    break;
+    case 2: //win
+      background("black");
+       // image(photo4, 500,500);
+      fill('white');
+      text("Winner Winner!, click", 100, 100);
+      break;
 
-    case 3://lose
-    background("black");
-    fill('white') ;
-    text("Fail!, click",100,100);
-    break;
+    case 3: //lose
+      background("black");
+      fill('white');
+      text("Fail!, click", 100, 100);
+      break;
 
 
 
@@ -80,18 +82,18 @@ function draw() {
 function mouseReleased() {
   switch (state) {
     case 0:
-    state = 1 ;
-    break;
+      state = 1;
+      break;
 
     case 2: // they won and clicked to restart
-    resetTheGame() ;
-    state = 0 ;
-    break;
+      resetTheGame();
+      state = 0;
+      break;
 
     case 3: // they lost and clicked to restart
-    resetTheGame() ;
-    state = 0 ;
-    break;
+      resetTheGame();
+      state = 0;
+      break;
 
 
 
@@ -101,8 +103,8 @@ function mouseReleased() {
 
 
 function resetTheGame() {
-  timer = 0 ;
-  cars = [] ;
+  timer = 0;
+  cars = [];
   for (let i = 0; i < maxCars; i++) {
     cars.push(new Car());
   }
@@ -124,15 +126,15 @@ function game() {
     }
   }
 
-if (cars.length == 0){
-  state = 2;
-}
+  if (cars.length == 0) {
+    state = 2;
+  }
 
 
   // here is my frog
   checkForKeys();
   image('camera.jpg');
-  image('camera.jpg')(frogPos.x, frogPos.y, 75, 75);
+  image('camera.jpg',frogPos.x, frogPos.y, 75, 75);
 }
 
 
@@ -163,7 +165,7 @@ class Car {
 
   display() {
     image('camera.jpg');
-  image('film.jpg')(this.pos.x, this.pos.y, this.size, 25);
+    image('film.jpg')(this.pos.x, this.pos.y, this.size, 25);
     // textSize(this.size);
     // text("WOOHOO", this.pos.x, this.pos.y);
     // image()
