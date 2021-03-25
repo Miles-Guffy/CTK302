@@ -122,7 +122,7 @@ function resetTheGame() {
 
 
 function game() {
-  background(100);
+image(photo5, width / 2, height / 2);
 
 
   for (let i = 0; i < cars.length; i++) {
