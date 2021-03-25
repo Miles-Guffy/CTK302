@@ -8,6 +8,7 @@ let photo1;
 let photo2;
 let photo3;
 let photo4;
+let photo5;
 let f1;
 
 
@@ -20,6 +21,7 @@ function setup() {
   photo2 = loadImage('camera.jpg');
   photo3 = loadImage('film.jpg');
   photo4 = loadImage('winner.jpg');
+  photo5 = loadImage('boca.jpg');
 
   imageMode(CENTER);
   rectMode(CENTER);
@@ -48,6 +50,7 @@ function draw() {
       break;
 
     case 1:
+      image(photo5, width / 2, height / 2);
       game();
       timer++;
 
