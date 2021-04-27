@@ -60,7 +60,7 @@ function gotData(data) {
 
 
 function draw() {
-  background('white');
+  background('#6896a3');
 
   // // iterate through the bubbles and display the objects!
   for (let i = 0; i < bubbles.length; i++) {
