@@ -25,6 +25,7 @@ function draw() {
 
 
 
+
   switch (state) {
 
     case 0: // red
