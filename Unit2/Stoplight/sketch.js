@@ -6,7 +6,7 @@ let velocity = 10;
 function setup() {
   createCanvas(800, 800);
   ellipseMode(CENTER);
-  rectMode(Center);
+  rectMode(CENTER);
 }
 
 function draw() {
